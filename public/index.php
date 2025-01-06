@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once ('../functions.php');
 
 
 
@@ -34,6 +35,7 @@ Route::get('/admin/categories', [AdminController::class, 'categories']);
 Route::post('/admin/categories/crud', [AdminController::class, 'crudCategory']);
 Route::get('/admin/testimonials', [AdminController::class, 'testimonials']);
 Route::get('/admin/projects', [AdminController::class, 'projects']);
+Route::post('/admin/projects/remove', [AdminController::class, 'removeProject']);
 Route::post('/admin/users/delete', [AdminController::class, 'removeUser']);
 Route::post('/admin/users/status', [AdminController::class, 'changeStatus']);
 
